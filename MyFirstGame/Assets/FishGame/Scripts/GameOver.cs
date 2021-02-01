@@ -9,8 +9,13 @@ public class GameOver : MonoBehaviour {
 	public Text highscore;
 	public Text secondsSurvivedUI;
 	bool gameOver;
+	public Text timeElaspsedText;
+	public GameObject pauseButton;
+
 
 	void Start() {
+		Time.timeScale = 1f;
+
 		FindObjectOfType<PlayerController> ().OnPlayerDeath += OnGameOver;
 		highscore.text = PlayerPrefs.GetInt("HighScore",0).ToString();
 	}
@@ -20,11 +25,16 @@ public class GameOver : MonoBehaviour {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				SceneManager.LoadScene (3);
 			}
+        }
+        else
+        {
+			timeElaspsedText.text = Mathf.Round(Time.timeSinceLevelLoad).ToString();
 		}
 	}
 
 	void OnGameOver() {
 		gameOverScreen.SetActive (true);
+		pauseButton.SetActive(false);
 		int timeSurvive = Mathf.RoundToInt(Time.timeSinceLevelLoad);
 		secondsSurvivedUI.text = timeSurvive.ToString();
 
@@ -35,5 +45,7 @@ public class GameOver : MonoBehaviour {
 		}
 
 		gameOver = true;
+		Time.timeScale = 0f;
+
 	}
 }

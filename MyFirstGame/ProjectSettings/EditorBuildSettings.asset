@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/scene/story.unity
     guid: 0c4dfc42a7a519241927b2b40635daef
   - enabled: 1
-    path: Assets/FishGame/Scenes/fushgamemenu.unity
+    path: Assets/FishGame/Scenes/FishGameMenu.unity
     guid: 2de4272cebc378f4280d1e7eda48b60e
   - enabled: 1
-    path: Assets/FishGame/Scenes/Scene.unity
+    path: Assets/FishGame/Scenes/FishGame.unity
     guid: dd13eb44df6c44e09a4ed52e29e8ab82
+  - enabled: 1
+    path: Assets/WasteGame/Scenes/WasteGameMenu.unity
+    guid: 4b755e8690cf2954f83c15bd47cd45ce
   - enabled: 1
     path: Assets/WasteGame/Scenes/WasteGame.unity
     guid: 679ad83d5786ddc4aa15eb758b3f3720

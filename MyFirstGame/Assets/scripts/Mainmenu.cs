@@ -32,13 +32,18 @@ public class Mainmenu : MonoBehaviour
     }
 
     public void playgamefish () {
-        SceneManager.LoadScene(1);
-        //SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void playgamebin () {
         SceneManager.LoadScene(4);
         //SceneManager.LoadScene(2);
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
     }
 
     // public void playgame () {

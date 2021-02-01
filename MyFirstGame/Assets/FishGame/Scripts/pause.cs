@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pause : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject pauseButton;
 
     void Update () {
-        
-        if(Input.GetKeyDown (KeyCode.Escape))
+        if (Input.GetKeyDown (KeyCode.Escape))
         {   
             
             if (GameIsPaused)
@@ -25,6 +26,7 @@ public class pause : MonoBehaviour
     }
 
     public void Resume() {
+        pauseButton.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -32,6 +34,7 @@ public class pause : MonoBehaviour
     }
 
     public void Pause() {
+        pauseButton.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;        
@@ -48,6 +51,11 @@ public class pause : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene (5);
+    }
+
+    public void restartFishGame()
+    {
+        SceneManager.LoadScene(3);
     }
 
 }

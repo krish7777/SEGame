@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class Difficulty {
+public class Difficulty {
 
 	static float secondsToMaxDifficulty = 60;
 

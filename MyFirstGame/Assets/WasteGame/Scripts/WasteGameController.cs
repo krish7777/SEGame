@@ -22,12 +22,14 @@ public class WasteGameController : MonoBehaviour
 
     public GameObject pauseButton;
 
-    public float remainingTime;
+    public float remainingTime =10;
 
-    public Text timerText;
+    //public Text timerText;
     public Text pointsText;
 
     private bool playing;
+
+    private int currentLinearDrag = 10;
 
     public float[] positions;
 
@@ -37,7 +39,7 @@ public class WasteGameController : MonoBehaviour
     {
         Time.timeScale = 1;
         screenHalfUnit = new Vector2(Camera.main.aspect * Camera.main.orthographicSize , Camera.main.orthographicSize);
-        playing = false;
+        playing = true;
         float screenWidth = Camera.main.aspect * Camera.main.orthographicSize * 2;
         
         float cubeWidth = (screenWidth - 0.6f) / 5f;
@@ -60,16 +62,22 @@ public class WasteGameController : MonoBehaviour
             remainingTime -= Time.deltaTime;
             if(remainingTime < 0)
             {
-                endGame();
+                //endGame();
+                remainingTime = 10;
+                currentLinearDrag -= 1;
+                if (currentLinearDrag <= 1)
+                    currentLinearDrag = 1;
+
             }
 
-            printTime();
+            //printTime();
 
             if (Time.time > nextSpawnTime)
             {
                 nextSpawnTime = Time.time + secondBetweenSpawns;
                 Vector2 spawnPosition = new Vector2(positions[(int)Random.Range(0, 4.99f)], Camera.main.orthographicSize + 0.5f);
                 GameObject fallingWastePrefab = fallingWastePrefabs[Random.Range(0, fallingWastePrefabs.Length)];
+                fallingWastePrefab.GetComponent<Rigidbody2D>().drag = currentLinearDrag; 
                 Instantiate(fallingWastePrefab, spawnPosition, Quaternion.identity);
             }
         }
@@ -99,10 +107,11 @@ public class WasteGameController : MonoBehaviour
         pointsText.text = "Points: " + points;
 
     }
-    void printTime()
+    /*void printTime()
     {
         timerText.text = "Time Left: " + Mathf.RoundToInt(remainingTime);
     }
+    */
 
     public void quit()
     {

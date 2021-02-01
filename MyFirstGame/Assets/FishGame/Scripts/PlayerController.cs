@@ -31,10 +31,34 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector2 (-screenHalfWidthInWorldUnits, transform.position.y);
 		}
 
+		if (Input.touchCount > 0)
+		{
+			Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			if(touchPos.x>0)
+            {
+				velocity = speed;
+			}
+			else
+            {
+				velocity = -speed;
+			}
+			transform.Translate(Vector2.right * velocity * Time.deltaTime);
+
+			if (transform.position.x < -screenHalfWidthInWorldUnits)
+			{
+				transform.position = new Vector2(screenHalfWidthInWorldUnits, transform.position.y);
+			}
+
+			if (transform.position.x > screenHalfWidthInWorldUnits)
+			{
+				transform.position = new Vector2(-screenHalfWidthInWorldUnits, transform.position.y);
+			}
+		}
+
 	}
 
 	void OnTriggerEnter2D(Collider2D triggerCollider) {
-		if (triggerCollider.tag == "Falling Block") {
+		if (triggerCollider.tag == "Falling Block" ) {
 			if (OnPlayerDeath != null) {
 				OnPlayerDeath ();
 			}
