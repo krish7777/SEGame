@@ -31,7 +31,7 @@ public class binscenecontrol : MonoBehaviour
     }
 
     public void next () {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
         //SceneManager.LoadScene(2);
     }
 

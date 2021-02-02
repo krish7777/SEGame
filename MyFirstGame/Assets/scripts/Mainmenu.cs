@@ -25,6 +25,11 @@ public class Mainmenu : MonoBehaviour
         //SceneManager.LoadScene(2);
     }
 
+     public void playgamescene () {
+        SceneManager.LoadScene(6);
+        //SceneManager.LoadScene(2);
+    }
+
     public void gobackO () {
         optionsmenu.SetActive(false);
         menu.SetActive(true);

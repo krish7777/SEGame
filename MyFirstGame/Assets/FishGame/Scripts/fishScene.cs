@@ -31,7 +31,7 @@ public class fishScene : MonoBehaviour
     }
 
     public void next () {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
         //SceneManager.LoadScene(2);
     }
 

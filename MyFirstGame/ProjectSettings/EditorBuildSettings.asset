@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/WasteGame/Scenes/WasteGame.unity
     guid: 679ad83d5786ddc4aa15eb758b3f3720
-  - enabled: 0
+  - enabled: 1
     path: Assets/scene/binscene.unity
     guid: 348af583a18605147a6b49248378f5c9
   - enabled: 1
