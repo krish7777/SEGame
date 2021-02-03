@@ -17,7 +17,7 @@ public class DestroyWaste : MonoBehaviour
     {
         points = 0;
         w = GameObject.FindObjectOfType<WasteGameController>().GetComponent<WasteGameController>();
-        highscoreText.text = "Highscore : "+ PlayerPrefs.GetInt("HighScoreWaste", 0).ToString();
+        highscoreText.text =PlayerPrefs.GetInt("HighScoreWaste", 0).ToString();
     }
 
     // Update is called once per frame
@@ -96,7 +96,7 @@ public class DestroyWaste : MonoBehaviour
         if (points > PlayerPrefs.GetInt("HighScoreWaste", 0))
         {
             PlayerPrefs.SetInt("HighScoreWaste", points);
-            highscoreText.text ="Highscore : "+ points.ToString();
+            highscoreText.text = points.ToString();
         }
     }
 }

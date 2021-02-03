@@ -75,7 +75,7 @@ public class WasteGameController : MonoBehaviour
             if (Time.time > nextSpawnTime)
             {
                 nextSpawnTime = Time.time + secondBetweenSpawns;
-                Vector2 spawnPosition = new Vector2(positions[(int)Random.Range(0, 4.99f)], Camera.main.orthographicSize + 0.5f);
+                Vector3 spawnPosition = new Vector3(positions[(int)Random.Range(0, 4.99f)], Camera.main.orthographicSize + 0.5f, 0.1f);
                 GameObject fallingWastePrefab = fallingWastePrefabs[Random.Range(0, fallingWastePrefabs.Length)];
                 fallingWastePrefab.GetComponent<Rigidbody2D>().drag = currentLinearDrag; 
                 Instantiate(fallingWastePrefab, spawnPosition, Quaternion.identity);
@@ -104,11 +104,12 @@ public class WasteGameController : MonoBehaviour
 
     public void updatePoints(int points)
     {
-        pointsText.text = "Points: " + points;
+        pointsText.text = points.ToString();
 
     }
     /*void printTime()
     {
+    {   
         timerText.text = "Time Left: " + Mathf.RoundToInt(remainingTime);
     }
     */
