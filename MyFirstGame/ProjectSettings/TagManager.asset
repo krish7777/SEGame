@@ -8,6 +8,12 @@ TagManager:
   - paper
   - waste
   - Falling Block
+  - Bin
+  - GreenWaste
+  - BlackWaste
+  - BlueWaste
+  - BGM
+  - Ending Block
   layers:
   - Default
   - TransparentFX

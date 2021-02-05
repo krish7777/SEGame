@@ -8,6 +8,7 @@ public class fishScene : MonoBehaviour
     public GameObject s1;
     public GameObject s2;
     public GameObject s3;
+    public GameObject s4;
 
     public void gstory1 () {
         s2.SetActive(false);
@@ -30,8 +31,20 @@ public class fishScene : MonoBehaviour
         s3.SetActive(true);
     }
 
+    public void gstory3()
+    {
+        s4.SetActive(false);
+        s3.SetActive(true);
+    }
+
+    public void cstory4()
+    {
+        s3.SetActive(false);
+        s4.SetActive(true);
+    }
+
     public void next () {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(9);
         //SceneManager.LoadScene(2);
     }
 

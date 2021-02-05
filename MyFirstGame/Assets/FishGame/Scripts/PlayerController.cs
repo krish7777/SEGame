@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public event System.Action OnPlayerDeath;
 
 	float screenHalfWidthInWorldUnits;
+	public AudioSource collissionSound;
 
 	// Use this for initialization
 	void Start () {
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D triggerCollider) {
 		if (triggerCollider.tag == "Falling Block" ) {
+			collissionSound.Play();
 			if (OnPlayerDeath != null) {
 				OnPlayerDeath ();
 			}

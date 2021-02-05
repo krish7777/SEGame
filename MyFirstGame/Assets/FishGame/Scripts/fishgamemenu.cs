@@ -6,20 +6,12 @@ using UnityEngine.SceneManagement;
 public class fishgamemenu : MonoBehaviour
 {
 
-    public GameObject menu;
-    public GameObject optionsmenu;
+    public GameObject mainMenu;
+    public GameObject settingsMenu;
+    public GameObject infoMenu;
+    public GameObject controlsMenu;
+    public GameObject difficultyMenu;
 
-    public void openoptions () {
-        menu.SetActive(false);
-        optionsmenu.SetActive(true);
-    }
-
-
-    public void gobackO () {
-        optionsmenu.SetActive(false);
-        menu.SetActive(true);
-        //SceneManager.LoadScene(2);
-    }
 
 
     // Start is called before the first frame update
@@ -34,4 +26,54 @@ public class fishgamemenu : MonoBehaviour
         SceneManager.LoadScene(0);
         //SceneManager.LoadScene(2);
     }
+
+    public void openSettings()
+    {
+        mainMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void closeSettings()
+    {
+        mainMenu.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
+
+    public void openInfo()
+    {
+        settingsMenu.SetActive(false);
+        infoMenu.SetActive(true);
+    }
+
+    public void closeInfo()
+    {
+        settingsMenu.SetActive(true);
+        infoMenu.SetActive(false);
+    }
+
+    public void openControls()
+    {
+        settingsMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
+    public void closeControls()
+    {
+        settingsMenu.SetActive(true);
+        controlsMenu.SetActive(false);
+    }
+
+    public void openDifficulty()
+    {
+        settingsMenu.SetActive(false);
+        difficultyMenu.SetActive(true);
+    }
+
+    public void closeDifficullty()
+    {
+        settingsMenu.SetActive(true);
+        difficultyMenu.SetActive(false);
+    }
+
+
 }

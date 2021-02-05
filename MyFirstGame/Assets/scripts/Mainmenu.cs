@@ -51,6 +51,24 @@ public class Mainmenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void muteAudio()
+    {
+        AudioListener.volume = 0;
+    }
+
+    public void unmuteAudio()
+    {
+        AudioListener.volume = 1;
+    }
+
+    public void handleAudioCheckbox(bool val)
+    {
+        if (val)
+            unmuteAudio();
+        else
+            muteAudio();
+    }
+
     // public void playgame () {
     //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
     //     //SceneManager.LoadScene(2);

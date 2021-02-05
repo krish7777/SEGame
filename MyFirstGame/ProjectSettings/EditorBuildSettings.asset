@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/scene/menu.unity
     guid: 92943cda5521d964ca9f91820e542bf2
   - enabled: 1
-    path: Assets/scene/story.unity
+    path: Assets/StoryMode/Scenes/FishStory.unity
     guid: 0c4dfc42a7a519241927b2b40635daef
   - enabled: 1
     path: Assets/FishGame/Scenes/FishGameMenu.unity
@@ -24,9 +24,15 @@ EditorBuildSettings:
     path: Assets/WasteGame/Scenes/WasteGame.unity
     guid: 679ad83d5786ddc4aa15eb758b3f3720
   - enabled: 1
-    path: Assets/scene/binscene.unity
+    path: Assets/StoryMode/Scenes/WasteStory.unity
     guid: 348af583a18605147a6b49248378f5c9
   - enabled: 1
     path: Assets/scene/main.unity
     guid: ed7ecaf9957440c41bd8964bb17c16df
+  - enabled: 1
+    path: Assets/StoryMode/Scenes/WasteGameStory.unity
+    guid: 4f1ba288b4333444d8738225650a8999
+  - enabled: 1
+    path: Assets/StoryMode/Scenes/FIshGameStory.unity
+    guid: 4515affdd7c932f41a8a4ef515b00c16
   m_configObjects: {}

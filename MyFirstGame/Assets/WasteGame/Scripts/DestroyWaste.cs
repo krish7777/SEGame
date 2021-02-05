@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class DestroyWaste : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static int points = 0;
     public Text highscoreText;
     public AudioSource correctBin;
@@ -17,18 +16,18 @@ public class DestroyWaste : MonoBehaviour
     {
         points = 0;
         w = GameObject.FindObjectOfType<WasteGameController>().GetComponent<WasteGameController>();
-        highscoreText.text =PlayerPrefs.GetInt("HighScoreWaste", 0).ToString();
+        highscoreText.text = PlayerPrefs.GetInt("HighScoreWaste", 0).ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D triggerCollider)
     {
-        if(gameObject.name == "Ground" && triggerCollider.tag.EndsWith("Waste"))
+        if (gameObject.name == "Ground" && triggerCollider.tag.EndsWith("Waste"))
         {
             Destroy(triggerCollider.gameObject);
             gameOverSound.Play();
@@ -67,7 +66,7 @@ public class DestroyWaste : MonoBehaviour
                 Destroy(triggerCollider.gameObject);
 
             }
-            else if(triggerCollider.tag == "BlackWaste")
+            else if (triggerCollider.tag == "BlackWaste")
             {
                 if (gameObject.name == "BlackBin")
                 {
