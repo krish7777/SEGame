@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -355,23 +355,23 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 46
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 46
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This will be the condition of the fishes if we do not do anything for
-    our world. Hope our small game was able to open your mind.
+  m_Text: 'This will be the condition of the fishes in our oceans if we keep on polluting
+    our oceans. Hope our small game was able to open your mind.
 
 
-    Let us all be
-    responsible citizens and strive for a better world for us and fellow beings.'
+    Let us all
+    be responsible citizens and strive for a better world for us and fellow beings.'
 --- !u!222 &495917307
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.85882354, g: 0.8, b: 0.92156863, a: 1}
+  m_Color: {r: 0.5803922, g: 0.78039217, b: 0.9019608, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -699,6 +699,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2677525282694006194, guid: 8521f135a80607e459b1de5059591f66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2677525281285484498, guid: 8521f135a80607e459b1de5059591f66, type: 3}
     - {fileID: 2677525282629823530, guid: 8521f135a80607e459b1de5059591f66, type: 3}
@@ -725,6 +730,10 @@ MonoBehaviour:
   - {fileID: 4416070290448986560, guid: e2cc0d7ec6c3cfa428eb971a3140927e, type: 3}
   - {fileID: 6498085267220501398, guid: 0c959be0afeea0b499138348c99be08f, type: 3}
   - {fileID: 2758817355632340563, guid: 8ccdfa6f4b6984e4e8650b8351a28ec1, type: 3}
+  - {fileID: 7653572300312898804, guid: 8b78290190a0df347903e00a4895bad5, type: 3}
+  - {fileID: 4286603841605484447, guid: 9fd6b083d870d4b42839c27bdf8aa2b8, type: 3}
+  - {fileID: 1648104325160759904, guid: 7bf56d4de6057624983e041ea9468bd0, type: 3}
+  - {fileID: 4717285118878837877, guid: f645cf159fbdc31479181e4b1d91301e, type: 3}
   secondsBetweenSpawnsMinMax: {x: 1, y: 2}
   spawnSizeMinMax: {x: 1, y: 2}
   spawnAngleMax: 10
@@ -786,8 +795,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.0934, y: 705.9}
-  m_SizeDelta: {x: 318.18674, y: 108.9989}
+  m_AnchoredPosition: {x: 0, y: 705.9}
+  m_SizeDelta: {x: 400, y: 108.9989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150185796
 MonoBehaviour:
@@ -802,7 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0.02745098, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -810,11 +819,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

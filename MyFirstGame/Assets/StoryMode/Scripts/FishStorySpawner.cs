@@ -52,7 +52,7 @@ public class FishStorySpawner : MonoBehaviour
 
 		if(Time.timeSinceLevelLoad > endTime + 2 && !endBlockSpawned)
         {
-			Instantiate(EndBlock, new Vector2(0, screenHalfSizeWorldUnits.y + 5), Quaternion.identity);
+			Instantiate(EndBlock, new Vector3(0, screenHalfSizeWorldUnits.y + 5, -1), Quaternion.identity);
 			endBlockSpawned = true;
 
 		}

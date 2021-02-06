@@ -22,7 +22,7 @@ public class WasteStoryController : MonoBehaviour
 
     public GameObject pauseButton;
 
-    public float remainingTime = 10;
+    public float remainingTime = 20;
 
     public Text timerText;
     public Text pointsText;
@@ -49,7 +49,7 @@ public class WasteStoryController : MonoBehaviour
         blackBin.transform.position = new Vector2(-((2 * cubeWidth) + 0.2f), -3.8f);
 
         positions = new float[] { 0, cubeWidth + 0.1f, (2 * cubeWidth) + 0.2f, -(cubeWidth + 0.1f), -(2 * cubeWidth + 0.2f) };
-        remainingTime = 5;
+        remainingTime = 2;
         /* positions = new float[] { 0, 1.1f, 2.2f, -1.1f, -2.2f };*/
 
     }
